@@ -47,7 +47,7 @@ def main():
     model.eval()
     video_loader = VideoLoader(root_dir=root_dir, n_clip=args.frame_unit,
                                discard=True, to_tensor=True, overlap=args.overlap, resolution=(480, 640))
-    with torch.no_grad:
+    with torch.no_grad():
         for name, unit in video_loader:
             unit = unit.unsqueeze(0)
             unit = unit.cuda(args.gpu_id)

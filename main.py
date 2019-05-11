@@ -12,9 +12,9 @@ import os
 import sys
 
 import models.c3d_model as c3d
-import loader.VideoLoader as VideoLoader
+from loader import VideoLoader
 
-import options.Opt as Opt
+from options import Opt
 
 
 def main():

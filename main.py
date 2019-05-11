@@ -23,7 +23,7 @@ def main():
         print('No define root_dir')
         sys.exit()
 
-    if torch.cuda.is_available():
+    if not torch.cuda.is_available():
         print('CUDA is not available')
         sys.exit()
 

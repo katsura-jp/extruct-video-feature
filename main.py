@@ -55,8 +55,8 @@ def main():
             # torch.cuda -> np.array
             visual_feature = visual_feature.cpu().detach().numpy()
             visual_activity_concept = visual_activity_concept.cpu().detach().numpy()
-            np.save(os.path.join('./tmp/visual-feature', name), visual_feature)
-            np.save(os.path.join('./tmp/visual-activity-concept', name), visual_activity_concept)
+            np.save(os.path.join(visual_feature_out_dir, name), visual_feature)
+            np.save(os.path.join(activity_concept_out_dir, name), visual_activity_concept)
             if args.verbose:
                 print('save {}.npy'.format(name))
 

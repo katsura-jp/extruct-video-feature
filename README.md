@@ -36,4 +36,4 @@ overlap frame is 8 frame(16*0.5), so start frame are 1,9, 17, 25,... Default : 0
 (e.g. `python3.6 main.py --root_dir /mnt/dataset/Charades --frame_unit 16 --overlap 0.5 --pretrained_path ./c3d.pickle --out_dir ./feature --verbose`)
 
 ### Save format
-nps
+.npy

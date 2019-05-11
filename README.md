@@ -5,8 +5,8 @@ The output follows the [MAC](https://arxiv.org/abs/1811.08925).
 
 
 ### Requirements
-- Python 3.6
-- PyTorch v1.0
+- Python 3.7
+- PyTorch 1.1
 - others
 
 ### Model

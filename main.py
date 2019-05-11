@@ -39,7 +39,10 @@ def main():
     os.makedirs(activity_concept_out_dir, exist_ok=True)
 
     root_dir = glob.glob(os.path.join(args.root_dir,'*'))
-    model = c3d(pretrained=True)
+    model = c3d(pretrained=False)
+    if args.pretrained_path is not None:
+        model.load_state_dict(torch.load(args.pretrained_path))
+
     model = model.to(args.gpu_id)
     model.eval()
     video_loader = VideoLoader(root_dir=root_dir, n_clip=args.frame_unit,

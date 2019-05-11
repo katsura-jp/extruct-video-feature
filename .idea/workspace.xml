@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="420a062f-9b72-40f2-9b69-33883d246e66" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/__init__.py" afterPath="$PROJECT_DIR$/models/__init__.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/models/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+              <caret line="0" column="26" lean-forward="true" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -39,20 +40,9 @@
       <file leaf-file-name="c3d_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/c3d_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
+            <state relative-caret-position="1360">
               <caret line="85" column="25" lean-forward="false" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
-              <folding>
-                <marker date="1557549330809" expanded="true" signature="0:97" ph="import ..." />
-                <marker date="1557549330809" expanded="true" signature="133:208" ph="..." />
-                <marker date="1557549330809" expanded="true" signature="232:2662" ph="..." />
-                <marker date="1557549330809" expanded="true" signature="237:289" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-                <marker date="1557549330809" expanded="true" signature="329:1668" ph="..." />
-                <marker date="1557549330809" expanded="true" signature="1695:2662" ph="..." />
-                <marker date="1557549330809" expanded="true" signature="2712:2945" ph="..." />
-                <marker date="1557549330809" expanded="true" signature="2757:2928" ph="..." />
-                <marker date="1557549330809" expanded="true" signature="2999:3279" ph="..." />
-                <marker date="1557549330809" expanded="true" signature="3004:3224" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -70,8 +60,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            <state relative-caret-position="643">
+              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -119,10 +109,10 @@
         <option value="$PROJECT_DIR$/models/utils.py" />
         <option value="$PROJECT_DIR$/models/c3d.py" />
         <option value="$PROJECT_DIR$/models/c3d_model.py" />
-        <option value="$PROJECT_DIR$/models/__init__.py" />
         <option value="$PROJECT_DIR$/loader.py" />
         <option value="$PROJECT_DIR$/options.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/models/__init__.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
@@ -326,33 +316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/c3d_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="85" column="25" lean-forward="false" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
-          <folding>
-            <marker date="1557549330809" expanded="true" signature="0:97" ph="import ..." />
-            <marker date="1557549330809" expanded="true" signature="133:208" ph="..." />
-            <marker date="1557549330809" expanded="true" signature="232:2662" ph="..." />
-            <marker date="1557549330809" expanded="true" signature="237:289" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1557549330809" expanded="true" signature="329:1668" ph="..." />
-            <marker date="1557549330809" expanded="true" signature="1695:2662" ph="..." />
-            <marker date="1557549330809" expanded="true" signature="2712:2945" ph="..." />
-            <marker date="1557549330809" expanded="true" signature="2757:2928" ph="..." />
-            <marker date="1557549330809" expanded="true" signature="2999:3279" ph="..." />
-            <marker date="1557549330809" expanded="true" signature="3004:3224" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -382,10 +345,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="true" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/c3d_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="85" column="25" lean-forward="false" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+        <state relative-caret-position="643">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

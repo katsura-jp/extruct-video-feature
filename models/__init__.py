@@ -1,1 +1,1 @@
-from .c3d_model import *
+from .c3d_model import c3d

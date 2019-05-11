@@ -41,27 +41,27 @@ class C3D(nn.Module):
     def forward(self, x):
         # x : [1, 3, 16, 112, 112]
         x = self.relu(self.conv1(x)) # [1, 64, 16, 112, 112]
-        x = self.pool1(x) # [1, 64, 16, 56, 56]
+        x = self.pool1(x) # [1, 64, 16, 56, 56] | [1, 64, 16, 56, 56]
 
-        x = self.relu(self.conv2(x)) # [1, 128, 16, 56, 56]
-        x = self.pool2(x) # [1, 128, 8, 28, 28])
+        x = self.relu(self.conv2(x)) # [1, 128, 16, 56, 56] | [1, 128, 16, 56, 56]
+        x = self.pool2(x) # [1, 128, 8, 28, 28]) | [1, 128, 8, 28, 28]
 
-        x = self.relu(self.conv3a(x)) # [1, 256, 8, 28, 28]
-        x = self.relu(self.conv3b(x)) # [1, 256, 8, 28, 28]
-        x = self.pool3(x) # [1, 256, 4, 14, 14]
+        x = self.relu(self.conv3a(x)) # [1, 256, 8, 28, 28] | [1, 256, 8, 28, 28]
+        x = self.relu(self.conv3b(x)) # [1, 256, 8, 28, 28] | [1, 256, 8, 28, 28]
+        x = self.pool3(x) # [1, 256, 4, 14, 14] | [1, 256, 4, 14, 14]
 
-        x = self.relu(self.conv4a(x)) # [1, 512, 4, 14, 14]
-        x = self.relu(self.conv4b(x)) # [1, 512, 4, 14, 14]
-        x = self.pool4(x) # [1, 512, 2, 7, 7]
+        x = self.relu(self.conv4a(x)) # [1, 512, 4, 14, 14] | [1, 512, 4, 14, 14]
+        x = self.relu(self.conv4b(x)) # [1, 512, 4, 14, 14] | [1, 512, 4, 14, 14]
+        x = self.pool4(x) # [1, 512, 2, 7, 7] | [1, 512, 2, 7, 7]
 
-        x = self.relu(self.conv5a(x)) # [1, 512, 2, 7, 7]
-        x = self.relu(self.conv5b(x)) # [1, 512, 2, 7, 7]
-        x = self.pool5(x) # [1, 512, 1, 4, 4]
+        x = self.relu(self.conv5a(x)) # [1, 512, 2, 7, 7] | [1, 512, 2, 7, 7]
+        x = self.relu(self.conv5b(x)) # [1, 512, 2, 7, 7] | [1, 512, 2, 7, 7]
+        x = self.pool5(x) # [1, 512, 1, 4, 4] | [1, 512, 1, 4, 4]
 
-        x = x.view(-1, 8192) # [1, 8192]
-        x = self.relu(self.fc6(x))
+        x = x.view(-1, 8192) # [1, 8192] | [1, 8192]
+        x = self.relu(self.fc6(x)) # | [1, 4096]
         x = self.dropout(x)
-        x = self.relu(self.fc7(x))
+        x = self.relu(self.fc7(x)) # [1, 4096]
         x = self.dropout(x)
 
         logits = self.fc8(x)

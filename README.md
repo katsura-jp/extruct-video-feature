@@ -24,7 +24,7 @@ and you can download pretrained weight(Sports-1M) of C3D from [c3d.pickle](http:
 - `--overlap` (float) : specify frame overlap percentage. If you specify 16 to frame_unit and 0.5 to overlap,
 overlap frame is 8 frame(16*0.5), so start frame are 1,9, 17, 25,... Default : 0.0.
 - `--out_dir` (str) : specify the path to put output feature. Default: ./output
-- '--gpu_id' (int) : specify GPU ID that you use. Default: 0.
+- `--gpu_id` (int) : specify GPU ID that you use. Default: 0.
 - `--pretrained_path` (str) : specify pretrained weight path.
 - `--verbose` (flag) : If you add this option, print saved file names.
 

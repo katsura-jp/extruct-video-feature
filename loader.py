@@ -28,7 +28,7 @@ class VideoLoader:
         self._frame_width = None
         self._video_data = None
 
-        self.mb = master_bar(range(self.root_dir))
+        self.mb = master_bar(self.root_dir)
         self.mb_iter = iter(master_bar)
 
     def __iter__(self):

@@ -11,7 +11,9 @@ import gc
 import os
 import sys
 
-import models.c3d as c3d
+import models
+c3d = models.c3d
+
 from loader import VideoLoader
 
 from options import Opt
@@ -55,10 +57,10 @@ def main():
             if args.verbose:
                 print('save {}.npy'.format(name))
 
-    print('success!')
+
 
 
 if __name__ == '__main__':
     main()
-
+    print('success!')
 

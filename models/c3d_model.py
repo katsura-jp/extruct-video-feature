@@ -2,7 +2,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from .utils import load_state_dict_from_url
 
-__all__ = ['C3D']
+__all__ = ['C3D', 'c3d']
 
 
 model_urls = {

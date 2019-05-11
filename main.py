@@ -36,7 +36,7 @@ def main():
     os.makedirs(visual_feature_out_dir, exist_ok=True)
     os.makedirs(activity_concept_out_dir, exist_ok=True)
 
-    root_dir = glob.glob(args.root_dir)
+    root_dir = glob.glob(os.path.join(args.root_dir,'*'))
     model = c3d(pretrained=True)
     model = model.to(args.gpu_id)
     model.eval()

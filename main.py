@@ -32,6 +32,7 @@ def main():
     activity_concept_out_dir = os.path.join(out_dir, 'visual-activity-concept')
 
     print('output directory : {}'.format(out_dir))
+    os.makedirs(out_dir, exist_ok=True)
     os.makedirs(visual_feature_out_dir, exist_ok=True)
     os.makedirs(activity_concept_out_dir, exist_ok=True)
 

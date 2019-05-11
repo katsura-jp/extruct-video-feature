@@ -29,7 +29,7 @@ class VideoLoader:
         self._video_data = None
 
         self.mb = master_bar(self.root_dir)
-        self.mb_iter = iter(master_bar)
+        self.mb_iter = iter(self.mb)
 
     def __iter__(self):
         return self

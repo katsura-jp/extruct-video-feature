@@ -4,7 +4,7 @@ import cv2
 import torch
 
 class VideoLoader:
-    def __init__(self, root_dir, n_clip=16, discard=True, to_tensor=True, overlap=0.0, resolution=(480, 640)):
+    def __init__(self, root_dir, n_clip=16, discard=True, to_tensor=True, overlap=0.0, resolution=(112, 112)):
         self.root_dir = root_dir
         self.n_clip = n_clip
         self.discard = discard

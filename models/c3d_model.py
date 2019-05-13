@@ -80,7 +80,7 @@ class C3D(nn.Module):
 
 def _c3d(arch, pretrained, progress, **kwargs):
     model = C3D(**kwargs)
-    if pretrained is not None:
+    if pretrained:
           raise NotImplementedError()
 #         state_dict = load_state_dict_from_url(model_urls[arch],
 #                                               progress=progress)

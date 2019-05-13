@@ -15,7 +15,7 @@ import models
 c3d = models.c3d
 
 from loader import VideoLoader
-
+from utils import convert_param
 from options import Opt
 
 
@@ -39,9 +39,18 @@ def main():
     os.makedirs(activity_concept_out_dir, exist_ok=True)
 
     root_dir = glob.glob(os.path.join(args.root_dir,'*'))
-    model = c3d(pretrained=False)
-    if args.pretrained_path is not None:
-        model.load_state_dict(torch.load(args.pretrained_path))
+
+    if args.pretrain == 'sports-1m':
+        model = c3d(pretrained=False)
+        if args.pretrained_path is not None:
+            model.load_state_dict(torch.load(args.pretrained_path))
+    elif args.pretrain == 'kinetics':
+        model = c3d(pretrained=False, num_class=400)
+        if args.pretrained_path is not None:
+            import torchfile
+            model.load_state_dict(convert_param(torchfile.load(args.pretrained_path),
+                                                model.state_dict(),
+                                                verbose=True))
 
     model = model.to(args.gpu_id)
     model.eval()
@@ -50,7 +59,7 @@ def main():
     with torch.no_grad():
         for name, unit in video_loader:
             unit = unit.unsqueeze(0)
-            unit = unit.cuda(args.gpu_id)
+            unit = unit.to(args.gpu_id)
             visual_feature, visual_activity_concept = model(unit)
             # torch.cuda -> np.array
             visual_feature = visual_feature.cpu().detach().numpy()

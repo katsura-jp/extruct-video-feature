@@ -1,4 +1,5 @@
-# Extruct Video Feature
+# Extract Video Feature
+(I miss spell "extract" and this repository name is not correct spelling)
 extruct video feature from C3D.
 
 The output follows the [MAC](https://arxiv.org/abs/1811.08925).

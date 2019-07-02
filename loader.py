@@ -54,7 +54,6 @@ class VideoLoader(object):
             self._frame = 0  # memorize frame
 
             # input video data
-            # TODO: try-except
             try:
                 capture = cv2.VideoCapture(video_file_path)  # load video data
                 self._time_depth = int(capture.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -108,9 +107,14 @@ class VideoLoader(object):
                 self._end_flag = True
                 return self.__next__()
             else:
-                name = self._file_name + '_{:.1f}_{:.1f}'.format(self._start_frames[self._frame] + 1,
-                                                                 self._time_depth)
-                unit = self._video_data[self._start_frames[self._frame]: self._time_depth, :, :, :]
+                start_ = self._start_frames[self._frame -1] + self._next
+                end_ = self._time_depth
+                if start_ >= end_:
+                    self.end_flag = True
+                    return self.__next__()
+                name = self._file_name + '_{:.1f}_{:.1f}'.format(start_ + 1,
+                                                                 end_)
+                unit = self._video_data[start_: end_, :, :, :]
                 if self.to_tensor:
                     unit = self.toTensor(unit)
                 self._end_flag = True
@@ -125,7 +129,15 @@ class VideoLoader(object):
 
 
 def test():
-    video_loader = VideoLoader(root_dir, n_clip=16, discard=True, to_tensor=True, overlap=0.0, resolution=(112, 112)):
+    import glob
+    mp4_files = glob.glob('./videos/mp4/*.mp4')
+    mov_files = glob.glob('./videos/mov/*.mov')
+     
+    video_loader = VideoLoader(mp4_files, n_clip=16, discard=False, to_tensor=True, overlap=0.0, resolution=(112, 112))
+    for name, unit in video_loader:
+        # test
+        pass
+
 
 
 

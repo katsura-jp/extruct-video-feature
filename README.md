@@ -21,18 +21,18 @@ and pretrained weight(Kinetics) of C3D from [c3d-sports1m-kinetics.t7](https://g
 
 
 
-### Video Format
-- mp4
 
 ### Option
 - `--root_dir` (str) : give a directory path that have videos you want to extract feature.
 - `--frame_unit` (int) : specify frame length input to model at once. Default: `16`.
 - `--overlap` (float) : specify frame overlap percentage. If you specify 16 to frame_unit and 0.5 to overlap,
 overlap frame is 8 frame(16*0.5), so start frame are 1,9, 17, 25,... Default : `0.0`.
-- `--out_dir` (str) : specify the path to put output feature. Default: `./output`
+- `--out_dir` (str) : specify the path to put output feature. Default: `./output`.
 - `--gpu_id` (int) : specify GPU ID that you use. Default: `0`.
 - `--pretrained_path` (str) : specify pretrained weight path.
 - `--pretrain` (str) : specify pretrain dataset. you can choose `sport-1m` or `kinetics`. Default: `kinetics`.
+- `--input_format` (str) : specify input video format. you can choose `mp4` or `mov`. Default: `mp4`.
+- `--save_format` (str) : specify save format. you can choose `numpy` or `torch`. If you choose numpy, save format is `.npz`, and if you choose torch, it is `.pth`.
 - `--verbose` (flag) : If you add this option, print saved file names.
 
 ### Usage

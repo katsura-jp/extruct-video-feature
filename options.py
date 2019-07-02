@@ -11,6 +11,10 @@ class Opt:
         parser.add_argument('--pretrained_path', type=str, default=None, help='load pretrained weight')
         parser.add_argument('--pretrain', type=str, default='sports-1m', choices=['sports-1m', 'kinetics'],
                             help='decide the number of class. If you specify sports-1m, then 487, else if kinetics, then 400. Default: sports-1m')
+        parser.add_augment('--input_format', type=str, default='mp4', choice=['mp4', 'mov'],
+                            help='specify input video format. you can choose mp4 or mov. Default: mp4.')
+        parser.add_argument('--save_format', type=str, default='numpy', choice=['numpy', 'torch'],
+                            help='specify save format. you can choose numpy or torch. If you choose numpy, save format is .npz, and if you choose torch, it is .pth.')
         parser.add_argument('--verbose', action='store_true', help='print saved file name')
         self.parser = parser
 
